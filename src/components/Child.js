@@ -4,15 +4,15 @@ function Child({ loggedIn, change }) {
   return (
     <div className="child">
       {!loggedIn ? (
-        <>
+        <form>
           <label>Username:</label>
           <input type="text" />
           <label>Password:</label>
           <input type="password" />
           <button onClick={()=>change(true)}>Login</button>
-        </>
+        </form>
       ) : (
-        <p>you are logged in!</p>
+        <p>You are logged in!</p>
       )}
     </div>
   );
